@@ -3,7 +3,11 @@ import dotenv from "dotenv"
 import ConnectDb from "./src/config/Db.js"
 import bookRoute from "./src/routes/book.routes.js"
 
+
+import cors from "cors"
+
 const app = express()
+app.use(cors())
 app.use(express.json())
 dotenv.config()
 
